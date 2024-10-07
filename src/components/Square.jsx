@@ -1,18 +1,10 @@
-import { useState } from "react";
-("react");
-const Square = ({ value }) => {
-  const [buttonValue, setButtonValue] = useState("");
-  const handleClick = (value) => {
-    setButtonValue(value);
-   
-  };
-  console.log({ buttonValue });
+const Square = ({ value, onSquareClick }) => {
   return (
     <button
-      onClick={() => handleClick(value)}
+      onClick={()=> onSquareClick(0)}
       className="bg-white border border-gray-800 w-12 h-12 m-3"
     >
-      {buttonValue}
+      {value}
     </button>
   );
 };
